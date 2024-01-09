@@ -40,14 +40,14 @@ const registerSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required(),
   password: Joi.string().min(6).required(),
 });
-const rloginSchema = Joi.object({
+const loginSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required(),
   password: Joi.string().min(6).required(),
 });
 
 const schemas = {
   registerSchema,
-  rloginSchema,
+  loginSchema,
 };
 
 const User = model("user", userSchema);
